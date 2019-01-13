@@ -1,0 +1,2 @@
+graft myblog/templates
+include myblog/schema.sql

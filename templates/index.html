@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron text-center">
+  <h1> Welcome to my first Blog </h1>
+  <p class="lead">This is my first Blog built on python with Flask Framework and with the CSS Bootstrap Support</p>
+</br>
+  {% if session.logged_in %}
+  <p>Hi, {{session.username}}</p>
+  <a href="/dashboard" class="btn btn-success">Go to Dashboard</a>
+  {% else %}
+  <hr>
+</br>
+  <a href="/register" class="btn btn-success">Register</a>
+  <a href="/login" class="btn btn-dark">Login</a>
+  {% endif %}
+</div>
+
+{% endblock %}
